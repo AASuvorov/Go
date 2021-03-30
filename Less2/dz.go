@@ -21,4 +21,21 @@ func main() {
 	fmt.Scanln(&radius)
 	circle = radius * radius * math.Pi
 	fmt.Println("Площадь прямоугольника: ", circle)
+
+	//	Задание 3
+	var n, c1, c2, c3 int
+	fmt.Print("Введите трехзначное число: ")
+	fmt.Scanln(&n)
+	if n < 100 {
+		fmt.Println("Необходимо ввести трехзначное число")
+	} else {
+		c1 = n / 100
+		fmt.Println("сотен: ", c1)
+
+		c2 = (n / 10) % 10
+		fmt.Println("десятков: ", c2)
+
+		c3 = n % 10
+		fmt.Println("единиц: ", c3)
+	}
 }
