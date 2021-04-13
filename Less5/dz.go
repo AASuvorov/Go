@@ -79,17 +79,17 @@ func main() {
 	// ------------------ //
 
 	// Задание №3
-	num1 := 0.0
-	num2 := 0.0
+	n1 := 0.0
+	n2 := 0.0
 	operator := ""
 
 	fmt.Println("Введите число num1 затем оператор +,-,*,/ и затем num2")
-	fmt.Scan(&num1, &operator, &num2)
+	fmt.Scan(&n1, &operator, &n2)
 
 	c := Calc{
-		FirstOp:  num1,
+		FirstOp:  n1,
 		Operator: operator,
-		SecondOp: num2,
+		SecondOp: n2,
 	}
 
 	switch operator {
