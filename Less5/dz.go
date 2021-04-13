@@ -47,23 +47,35 @@ func (c Calc) Sum() float64 {
 	return c.FirstOp + c.SecondOp
 }
 
+func (c Calc) Mult() float64 {
+	return c.FirstOp * c.SecondOp
+}
+
+func (c Calc) Delenie() float64 {
+	return c.FirstOp / c.SecondOp
+}
+
+func (c Calc) Raznost() float64 {
+	return c.FirstOp - c.SecondOp
+}
+
 // ------------------ //
 
 func main() {
 	// Задание №1
-	// var z1 uint
-	// fmt.Println("Введите положительное число")
-	// fmt.Scanf("%d\n", &z1)
+	var z1 uint
+	fmt.Println("Введите положительное число")
+	fmt.Scanf("%d\n", &z1)
 
-	// fmt.Println(fibbonachi(z1))
+	fmt.Println(fibbonachi(z1))
 	// ------------------ //
 
 	// Задание №2
-	// var z2 uint
-	// fmt.Println("Введите положительное число")
-	// fmt.Scanf("%d\n", &z2)
+	var z2 uint
+	fmt.Println("Введите положительное число")
+	fmt.Scanf("%d\n", &z2)
 
-	// fmt.Println(fibbonachiMap(z2))
+	fmt.Println(fibbonachiMap(z2))
 	// ------------------ //
 
 	// Задание №3
@@ -79,6 +91,16 @@ func main() {
 		Operator: operator,
 		SecondOp: num2,
 	}
-	fmt.Println(c.Sum())
+
+	switch operator {
+	case "+":
+		fmt.Println(c.Sum())
+	case "*":
+		fmt.Println(c.Mult())
+	case "/":
+		fmt.Println(c.Delenie())
+	case "-":
+		fmt.Println(c.Raznost())
+	}
 	// ------------------ //
 }
